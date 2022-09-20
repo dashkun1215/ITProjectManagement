@@ -4,7 +4,14 @@ package org.example;
 public class Main {
 
     public static void main(String[] args) {
-        String message = "THEMATICS AND LIMITED DOCUMENTATION SUPPLIED BY CAPTAIN GUSTAVE BERTRAND OF FRENCH MILITARY INTELLIGENCE. THIS WAS THE GREATEST BREAKTHROUGH IN CRYPTANALYSIS IN A THOUSAND YEARS AND MORE, ACCORDING TO HISTORIAN DAVID KAHN. REJEWSKI AND HIS MATHEMATICAL CIPHER BUREAU COLLEAGUES, JERZY REEYCKI AND HENRYK ZYGALSKI, CONTINUED READING ENIGMA AND KEEPING PACE WITH THE EVOLUTION OF THE GERMAN ARMY MACHINTHE GERMANS MADE HEAVY USE, IN SEVERAL VARIANTS, OF AN ELECTROMECHANICAL ROTOR MACHINE KNOWN AS ENIGMA. MATHEMATICIAN MARIAN REJEWSKI, AT POLAND'S CIPHER BUREAU, IN DECEMBER DEDUCED THE DETAILED STRUCTURE OF THE GERMAN ARMY ENIGMA, USING M";
+        String message = " MATHEMATICS AND LIMITED DOCUMENTATION SUPPLIED BY CAPTAIN GUSTAVE BERTRAND OF FRENCH " +
+                "MILITARY INTELLIGENCE. THIS WAS THE GREATEST BREAKTHROUGH IN CRYPTANALYSIS IN A " +
+                "THOUSAND YEARS AND MORE, ACCORDING TO HISTORIAN DAVID KAHN. REJEWSKI AND HIS " +
+                "MATHEMATICAL CIPHER BUREAU COLLEAGUES, JERZY REEYCKI AND HENRYK ZYGALSKI, CONTINUED " +
+                "READING ENIGMA AND KEEPING PACE WITH THE EVOLUTION OF THE GERMAN ARMY MACHINTHE GERMANS" +
+                " MADE HEAVY USE, IN SEVERAL VARIANTS, OF AN ELECTROMECHANICAL ROTOR MACHINE KNOWN AS ENIGMA." +
+                " MATHEMATICIAN MARIAN REJEWSKI, AT POLAND'S CIPHER BUREAU, IN DECEMBER DEDUCED THE DETAILED STR" +
+                "UCTURE OF THE GERMAN ARMY ENIGMA, USING M";
 //        Викликаємо функцію кодування
         String encodedMsg = String.valueOf(Code(message));
         System.out.println(encodedMsg);
@@ -13,7 +20,8 @@ public class Main {
         System.out.print(encodedMsg);
     }
     public static int[] toNumbs (char[] text1) {
-        char[] latin = {' ', '.', ',', ';', '-', '\'', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        char[] latin = {' ', '.', ',', ';', '-', '\'', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+                'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         int[] codeOfText = new int[text1.length];
         for (int i = 0; i < text1.length; i++) {
             for (int j = 0; j < latin.length; j++) {
@@ -25,7 +33,8 @@ public class Main {
         return codeOfText;
     }
     public static char[] toText (int[] text1) {
-        char[] latin = {' ', '.', ',', ';', '-', '\'', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+        char[] latin = {' ', '.', ',', ';', '-', '\'', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+                'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
         char[] Text = new char[text1.length];
         for (int i = 0; i < text1.length; i++) {
             Text[i]=latin[text1[i]];
