@@ -9,6 +9,7 @@ public class TestCode {
         String text = String.valueOf(Main.Code(message));
         Assert.assertEquals("'YRXANADUVUJ", text);
     }
+
     @Test
     public void testDecode() throws Exception {
         String message = "H.QFYNJATGEP.AW'";
