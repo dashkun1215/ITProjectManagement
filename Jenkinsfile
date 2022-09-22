@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/dashkun1215/ITProjectManagement.git'
+//                 git 'https://github.com/dashkun1215/ITProjectManagement.git'
                 sh "mvn compile"
                 sh "mvn clean package"
 
