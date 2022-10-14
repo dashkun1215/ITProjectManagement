@@ -11,6 +11,7 @@ public class TestCode {
     }
 
 
+
     @Test
     public void testDecode() throws Exception {
         String message = "H.QFYNJATGEP.AW'";
