@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "mvn compile"
-                sh "mvn clean package"
+                bat "mvn compile"
+                bat "mvn clean package"
             }
             post {
                 success {
